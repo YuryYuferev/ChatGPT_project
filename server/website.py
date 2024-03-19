@@ -23,7 +23,6 @@ class Website:
                 'methods': ['GET', 'POST']
             }
         }
-
     def _chat(self, conversation_id):
         if not '-' in conversation_id:
             return redirect(f'/chat')

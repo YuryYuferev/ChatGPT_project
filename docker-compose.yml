@@ -1,9 +1,9 @@
 version: '3.5'
 
 services:
-  ChatGPT_project:
+  My_GPT:
     image: chatgpt-clone
-    container_name: ChatGPT_project
+    container_name: My_GPT
     build:
       context: .
       dockerfile: Dockerfile

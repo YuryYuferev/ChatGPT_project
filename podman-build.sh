@@ -1,5 +1,6 @@
 # Build stage
 podman build -t build-stage -f - . << EOF
+
 FROM python:3.8-alpine AS build
 
 WORKDIR /app

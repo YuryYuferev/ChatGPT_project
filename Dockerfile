@@ -9,6 +9,7 @@ RUN apk add --no-cache build-base && \
 
 COPY . .
 
+
 # Production stage
 FROM python:3.12-alpine AS production
 

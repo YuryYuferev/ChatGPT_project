@@ -10,7 +10,6 @@ import os
 
 from server.config import special_instructions
 
-
 class Backend_Api:
     def __init__(self, app, config: dict) -> None:
         self.app = app
