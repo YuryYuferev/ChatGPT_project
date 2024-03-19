@@ -7,6 +7,7 @@ COPY requirements.txt requirements.txt
 RUN apk add --no-cache build-base && \
     pip3 install --user --no-cache-dir -r requirements.txt
 
+
 COPY . .
 
 # Production stage

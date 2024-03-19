@@ -11,6 +11,7 @@ RUN apk add --no-cache build-base && \
 COPY . .
 EOF
 
+
 # Save the build-stage container ID.
 build_container_id=$(podman ps -a | grep build-stage | awk '{print $1}')
 

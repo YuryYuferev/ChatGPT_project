@@ -87,7 +87,6 @@ const ask_gpt = async (message) => {
                 </div>
             </div>
         `;
-
     /* .replace(/(?:\r\n|\r|\n)/g, '<br>') */
 
     message_box.scrollTop = message_box.scrollHeight;
