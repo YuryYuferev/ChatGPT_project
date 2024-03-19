@@ -13,8 +13,11 @@ I am very busy at the moment so I would be very thankful for contributions and P
 - [ ] better documentation
 - [ ] use react / faster backend language ? (newbies may be more confused and discouraged to use it)
  
-# ChatGPT_project
+# ChatGPT Clone
 feel free to improve the code / suggest improvements
+
+<img width="1470" alt="image" src="https://user-images.githubusercontent.com/98614666/232768610-fdeada85-3d21-4cf9-915e-a0ec9f3b7a9f.png">
+
 
 ## Getting Started
 To get started with this project, you'll need to clone the repository and set up a virtual environment. This will allow you to install the required dependencies without affecting your system-wide Python installation.
@@ -25,7 +28,7 @@ Before you can set up a virtual environment, you'll need to have Python installe
 ### Cloning the Repository
 Run the following command to clone the repository:
 ```
-git clone https://github.com/YuryYuferev/Project_My_ChatGPT.git
+git clone https://github.com/YuryYuferev/ChatGPT_pro.git
 ```
 
 ### Setting up a Virtual Environment
@@ -33,7 +36,7 @@ To set up a virtual environment, follow these steps:
 
 1. Navigate to the root directory of your project.
 ```
-cd Project_My_ChatGPT
+cd ChatGPT_pro
 ```
 2. Run the following command to create a new virtual environment:
 ```
