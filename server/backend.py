@@ -4,8 +4,8 @@ from flask import request
 from hashlib import sha256
 from datetime import datetime
 from requests import get
-from requests import post 
-from json     import loads
+from requests import post
+from json import loads
 import os
 
 from server.config import special_instructions
@@ -52,8 +52,8 @@ class Backend_Api:
                 extra = [{'role': 'user', 'content': blob}]
 
             conversation = [{'role': 'system', 'content': system_message}] + \
-                extra + special_instructions[jailbreak] + \
-                _conversation + [prompt]
+                           extra + special_instructions[jailbreak] + \
+                           _conversation + [prompt]
 
             url = f"{self.openai_api_base}/v1/chat/completions"
 
@@ -65,21 +65,21 @@ class Backend_Api:
                 }
 
             gpt_resp = post(
-                url     = url,
-                proxies = proxies,
-                headers = {
+                url=url,
+                proxies=proxies,
+                headers={
                     'Authorization': 'Bearer %s' % self.openai_key
-                }, 
-                json    = {
-                    'model'             : request.json['model'], 
-                    'messages'          : conversation,
-                    'stream'            : True
                 },
-                stream  = True
+                json={
+                    'model': request.json['model'],
+                    'messages': conversation,
+                    'stream': True
+                },
+                stream=True
             )
 
             if gpt_resp.status_code >= 400:
-                error_data =gpt_resp.json().get('error', {})
+                error_data = gpt_resp.json().get('error', {})
                 error_code = error_data.get('code', None)
                 error_message = error_data.get('message', "An error occurred")
                 return {
@@ -95,9 +95,9 @@ class Backend_Api:
                         decoded_line = loads(chunk.decode("utf-8").split("data: ")[1])
                         token = decoded_line["choices"][0]['delta'].get('content')
 
-                        if token != None: 
+                        if token != None:
                             yield token
-                            
+
                     except GeneratorExit:
                         break
 
@@ -105,7 +105,7 @@ class Backend_Api:
                         print(e)
                         print(e.__traceback__.tb_next)
                         continue
-                        
+
             return self.app.response_class(stream(), mimetype='text/event-stream')
 
         except Exception as e:

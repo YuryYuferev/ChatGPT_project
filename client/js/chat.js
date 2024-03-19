@@ -563,5 +563,4 @@ colorThemes.forEach((themeOption) => {
     document.documentElement.className = themeOption.id;
   });
 });
-
 document.onload = setTheme();
