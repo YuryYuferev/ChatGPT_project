@@ -13,11 +13,8 @@ I am very busy at the moment so I would be very thankful for contributions and P
 - [ ] better documentation
 - [ ] use react / faster backend language ? (newbies may be more confused and discouraged to use it)
  
-# ChatGPT Clone
+# ChatGPT_project
 feel free to improve the code / suggest improvements
-
-<img width="1470" alt="image" src="https://user-images.githubusercontent.com/98614666/232768610-fdeada85-3d21-4cf9-915e-a0ec9f3b7a9f.png">
-
 
 ## Getting Started
 To get started with this project, you'll need to clone the repository and set up a virtual environment. This will allow you to install the required dependencies without affecting your system-wide Python installation.
